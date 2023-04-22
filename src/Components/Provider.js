@@ -1,6 +1,6 @@
 import { useContext, createContext, useState} from "react"
 import Nav from "./Nav"
-import categories from "../data"
+import {categories} from "../data"
 
 export const ContextData = createContext()
 export function useContextProvider() {

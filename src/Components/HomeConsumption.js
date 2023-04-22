@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import categories from "../data.js";
+import {categories} from "../data.js";
 
 export default function HomeConsumption() {
   //! this will be a form. there will be radio buttons, with options of what the user may use.

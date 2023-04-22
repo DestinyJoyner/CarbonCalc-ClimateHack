@@ -41,6 +41,7 @@ export default function Food() {
     // [ 220, 34]
   }
  */
+console.log(categories)
   return (
     <div className="food" style={{ fontFamily: "monospace" }}>
       <h2>What food items do you consume?</h2>

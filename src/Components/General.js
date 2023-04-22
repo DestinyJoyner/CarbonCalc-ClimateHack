@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import categories from "../data.js";
+import {categories} from "../data.js";
 
 import { useState } from "react";
 
