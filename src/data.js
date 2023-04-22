@@ -1,11 +1,11 @@
 const categories= {
     "transportation": {
-      "Car (gasoline)": 151.9,
-      "Car (electric)": 49.5,
-      "Bike": 0,
-      "Public transit": 16.5,
-      "Air travel (domestic)": 14.5,
-      "Air travel (international)": 39.5
+      "gas_car": 151.9,
+      "elec_car": 49.5,
+      "bicycle": 0,
+      "mass_transit": 16.5,
+      "dom_flight": 14.5,
+      "int_flight": 39.5
     },
     "food": {
       "Beef": 220,

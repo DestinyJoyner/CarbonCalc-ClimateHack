@@ -12,5 +12,14 @@
 }
 
 #submit-button {
-    margin: 3vh
+    margin: 6vh
+}
+
+.selections label {
+    display: flex;
+    justify-content: center;
+}
+
+.selections input {
+    margin-right: 1vw;
 }
