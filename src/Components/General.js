@@ -2,6 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import categories from "../data.js";
 
+import { useState } from "react";
+
 export default function General() {
   const navigate = useNavigate();
   // "general consumption": {
@@ -16,6 +18,7 @@ export default function General() {
   //     "LED light bulb": 0.48,
   //     "Incandescent light bulb": 5.6
   //   }
+
 
   return (
     <div className="general" style={{ fontFamily: "monospace" }}>

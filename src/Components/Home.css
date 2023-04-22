@@ -1,0 +1,25 @@
+.home {
+    margin-top: 5%;
+    display: grid;
+    grid-template-rows: 1fr 1fr .5fr;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 80vh;
+
+    background-image: url("/public/carbon-home.gif");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.home .link {
+    grid-row: 3;
+}
+.start {
+    all: unset;
+    font-size: 4em;
+    height: fit-content;
+    width: fit-content;
+}

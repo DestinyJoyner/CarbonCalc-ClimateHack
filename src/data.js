@@ -44,4 +44,55 @@ const categories= {
     }
   }
 
-  module.exports= categories
+  // https://blog.arcadia.com/50-ways-to-reduce-your-carbon-footprint/
+  const tips = [
+    {
+        category: "transportation",
+        tips : [
+            "Carpool",
+            "Public transportation",
+            "Bike",
+            "Fly economy class",
+            "Travel by car or train instead of plane"
+        ]
+    },
+    {
+        category: "home",
+        tips : [
+            "Turn off the lights when you leave a room",
+            "Unplug electronics not in use",
+            "Keep room temperature moderate",
+            "Switch to LED bulbs",
+            "Do FULL loads of laundry",
+            "Take shorter showers",
+            "Recycle"
+        ]
+    },
+    {
+        category: "food",
+        tips : [
+            "Compost",
+            "Meatless Monday",
+            "Buy locally sourced",
+            "Donate excess food",
+            "Sustainable restaurants",
+            "Store food properly",
+            "Cook at home"
+        ]
+    },
+    {
+        category: "general",
+        tips : [
+            "Re-usable water bottle",
+            "Buy fair trade clothing/ shop seconhand stores",
+            "Buy natural products",
+            "Volunteer for community garden",
+            "Only shop for things you need"
+            
+        ]
+    },
+  ]
+  module.exports= {
+    categories,
+    tips,
+  }

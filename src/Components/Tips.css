@@ -1,0 +1,29 @@
+@media (max-width: 360px) {
+    .tips {
+        display: grid;
+        border: 1px solid red;
+        grid-template-rows: .3fr .5fr 2fr;
+        justify-items: center;
+        height: 80vh;
+    }
+    .tips h1 {
+        grid-row: 1;
+    }
+    .tip-category {
+        /* background-color: blue; */
+        width: 40vw;
+        height: fit-content;
+    }
+    .tip-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .show-tips {
+        grid-row: 3;
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 5%;
+        margin-left: 10%;
+        font-size: 1.3em;
+    }
+}

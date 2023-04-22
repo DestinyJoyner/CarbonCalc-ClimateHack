@@ -1,6 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import categories from "../data.js";
+// import categories from "../data.js";
+
+
+import { useContextProvider } from "./Provider.js";
+import { useState } from "react";
 
 // "food": {
 //     "Beef": 220,
@@ -22,6 +26,21 @@ export default function Food() {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+
+  const { result, setResult, categories} = useContextProvider()
+ /*  const [options, setOptions] = useState([])
+  function onChange(){
+    
+    if(options.includes(e.target.value)){
+      const remove = options.filter(el => el !== e.target.value)
+      setOptions(remove)
+    }
+    else {
+      setOptions([...options, e.target.value])
+    }
+    // [ 220, 34]
+  }
+ */
   return (
     <div className="food" style={{ fontFamily: "monospace" }}>
       <h2>What food items do you consume?</h2>
@@ -96,7 +115,7 @@ export default function Food() {
           <input type="radio" id="fruits" value={categories.food["Fruits"]} />
           Fruits
         </label>
-        <button onClick={() => navigate("/homeConsumption")}>Next!</button>
+        <button onClick={() => navigate("/home")}>Next!</button>
       </form>
     </div>
   );
