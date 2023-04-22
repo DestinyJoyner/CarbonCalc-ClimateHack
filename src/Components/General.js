@@ -1,24 +1,31 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import {categories} from "../data.js";
+import { categories } from "../data.js";
+import { useContextProvider } from "./Provider.js";
 
 import { useState } from "react";
 
 export default function General() {
+  const { result, setResult, categories } = useContextProvider();
   const navigate = useNavigate();
-  // "general consumption": {
-  //     "Single-use plastic bag": 3.08,
-  //     "Plastic water bottle": 5.28,
-  //     "Aluminum can": 0.44,
-  //     "Paper bag": 0.1,
-  //     "Reusable bag": 0,
-  //     "Smartphone": 11.2,
-  //     "Laptop": 36.8,
-  //     "Desktop computer": 74,
-  //     "LED light bulb": 0.48,
-  //     "Incandescent light bulb": 5.6
-  //   }
 
+  const [selection, setSelection] = useState([]);
+
+  const handleChecked = (e) => {
+    if (selection.includes(e.target.value)) {
+      let filtered = selection.filter((el) => el !== e.target.value);
+      setSelection(filtered);
+    } else {
+      setSelection([...selection, e.target.value]);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let sum = selection.reduce((acc, el) => (acc += Number(el)), 0);
+    setResult(result + sum);
+    navigate("/results");
+  };
 
   return (
     <div className="general" style={{ fontFamily: "monospace" }}>
@@ -31,6 +38,7 @@ export default function General() {
             type="radio"
             id="plastic-bag"
             value={categories["general consumption"]["Single-use plastic bag"]}
+            onChange={handleChecked}
           />
           Single Use Plastic Bag
         </label>
@@ -39,6 +47,7 @@ export default function General() {
             type="radio"
             id="reusable-bag"
             value={categories["general consumption"]["Reusable bag"]}
+            onChange={handleChecked}
           />
           Reusable bag
         </label>
@@ -48,6 +57,7 @@ export default function General() {
             type="radio"
             id="paper-bag"
             value={categories["general consumption"]["Paper bag"]}
+            onChange={handleChecked}
           />
           Paper Bag
         </label>
@@ -57,6 +67,7 @@ export default function General() {
             type="radio"
             id="plastic-water-bottle"
             value={categories["general consumption"]["Plastic water bottle"]}
+            onChange={handleChecked}
           />
           Plastic water bottle
         </label>
@@ -65,6 +76,7 @@ export default function General() {
             type="radio"
             id="aluminum-can"
             value={categories["general consumption"]["Aluminum can"]}
+            onChange={handleChecked}
           />
           Aluminum Can
         </label>
@@ -73,6 +85,7 @@ export default function General() {
             type="radio"
             id="smartphone"
             value={categories["general consumption"]["Smartphone"]}
+            onChange={handleChecked}
           />
           Smartphone
         </label>
@@ -81,6 +94,7 @@ export default function General() {
             type="radio"
             id="laptop"
             value={categories["general consumption"]["Laptop"]}
+            onChange={handleChecked}
           />
           Laptop
         </label>
@@ -89,6 +103,7 @@ export default function General() {
             type="radio"
             id="desktop"
             value={categories["general consumption"]["Desktop computer"]}
+            onChange={handleChecked}
           />
           Desktop Computer
         </label>
@@ -97,6 +112,7 @@ export default function General() {
             type="radio"
             id="led-light-bulb"
             value={categories["general consumption"]["LED light bulb"]}
+            onChange={handleChecked}
           />
           LED light bulb
         </label>
@@ -105,10 +121,11 @@ export default function General() {
             type="radio"
             id="incandescent-light-bulb"
             value={categories["general consumption"]["Incandescent light bulb"]}
+            onChange={handleChecked}
           />
           Incandescent light bulb
         </label>
-        <button onClick={() => navigate("/results")}>Finish!</button>
+        <button onClick={handleSubmit}>Finish!</button>
       </form>
     </div>
   );
