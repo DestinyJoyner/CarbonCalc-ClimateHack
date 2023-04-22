@@ -1,0 +1,16 @@
+.selections {
+    width: 50vw;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.transpo-form {
+    text-align: center;
+}
+
+#submit-button {
+    margin: 3vh
+}
