@@ -1,27 +1,28 @@
-import React from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {categories} from "../data.js";
+
+import { useContextProvider } from "./Provider.js";
 
 export default function HomeConsumption() {
-  //! this will be a form. there will be radio buttons, with options of what the user may use.
-  //! each button will have a value associated to it that the user doesn't see
-  //! they will be radio buttons. allow for multiple buttons to be selected
-  //! the calculations will be made using a function that adds it to the piece of state
-  //! up top of the page, the user will be propmted with a question
-  //! at the bottom will be a next button, which will direct to the next page with the next question
-  // "home": {
-  //     "Electricity (coal)": 1497,
-  //     "Electricity (natural gas)": 937,
-  //     "Electricity (renewable)": 115,
-  //     "Natural gas (heating)": 1308,
-  //     "Oil (heating)": 1942,
-  //     "Propane (heating)": 1569,
-  //     "Water usage": 590
-  //   },
-
+  const { result, setResult, categories } = useContextProvider();
   const navigate = useNavigate();
+
+  const [selection, setSelection] = useState([]);
+
+  const handleChecked = (e) => {
+    if (selection.includes(e.target.value)) {
+      let filtered = selection.filter((el) => el !== e.target.value);
+      setSelection(filtered);
+    } else {
+      setSelection([...selection, e.target.value]);
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    let sum = selection.reduce((acc, el) => (acc += Number(el)), 0);
+    setResult(result + sum);
+    navigate("/general");
   };
 
   return (
@@ -33,25 +34,28 @@ export default function HomeConsumption() {
           <h4>Electricity Source?</h4>
           <label htmlFor="electricity (coal)">
             <input
-              type="radio"
+              type="checkbox"
               id="electricity (coal)"
               value={categories.home["Electricity (coal)"]}
+              onChange={handleChecked}
             />
             Electricity (coal)
           </label>
           <label htmlFor="electricity (natural gas)">
             <input
-              type="radio"
+              type="checkbox"
               id="electricity (natural gas)"
               value={categories.home["Electricity (natural gas)"]}
+              onChange={handleChecked}
             />
             Electricity (natural gas)
           </label>
           <label htmlFor="electricity (renewable)">
             <input
-              type="radio"
+              type="checkbox"
               id="electricity (renewable)"
               value={categories.home["Electricity (renewable)"]}
+              onChange={handleChecked}
             />
             Electricity (renewable)
           </label>
@@ -59,29 +63,32 @@ export default function HomeConsumption() {
           <h4>Heating Source?</h4>
           <label htmlFor="natural gas (heating)">
             <input
-              type="radio"
+              type="checkbox"
               id="natural gas (heating)"
               value={categories.home["Natural gas (heating)"]}
+              onChange={handleChecked}
             />
             Natural gas (heating)
           </label>
           <label htmlFor="oil (heating)">
             <input
-              type="radio"
+              type="checkbox"
               id="oil (heating)"
               value={categories.home["Oil (heating)"]}
+              onChange={handleChecked}
             />
             Oil (heating)
           </label>
           <label htmlFor="propane (heating)">
             <input
-              type="radio"
+              type="checkbox"
               id="propane (heating)"
               value={categories.home["Propane (heating)"]}
+              onChange={handleChecked}
             />
             Propane (heating)
           </label>
-          <button onClick={() => navigate("/general")}>Next!</button>
+          <button onClick={handleChecked}>Next!</button>
         </form>
       </div>
     </>
