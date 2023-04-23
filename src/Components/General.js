@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { categories } from "../data.js";
 import { useContextProvider } from "./Provider.js";
+import "./General.css";
 
 import { useState } from "react";
 
@@ -29,13 +29,13 @@ export default function General() {
 
   return (
     <div className="general" style={{ fontFamily: "monospace" }}>
-      <h1>General Consumption</h1>
+      <h1 className="general_title">General Consumption</h1>
 
-      <form>
-        <h3> What kind of items do you go for?</h3>
+      <form className="general_form" onSubmit={handleSubmit}>
+        <h3 className="general_q"> What kind of items do you go for?</h3>
         <label htmlFor="plastic-bag">
           <input
-            type="radio"
+            type="checkbox"
             id="plastic-bag"
             value={categories["general consumption"]["Single-use plastic bag"]}
             onChange={handleChecked}
@@ -44,7 +44,7 @@ export default function General() {
         </label>
         <label htmlFor="reusable-bag">
           <input
-            type="radio"
+            type="checkbox"
             id="reusable-bag"
             value={categories["general consumption"]["Reusable bag"]}
             onChange={handleChecked}
@@ -54,7 +54,7 @@ export default function General() {
 
         <label htmlFor="paper-bag">
           <input
-            type="radio"
+            type="checkbox"
             id="paper-bag"
             value={categories["general consumption"]["Paper bag"]}
             onChange={handleChecked}
@@ -64,7 +64,7 @@ export default function General() {
 
         <label htmlFor="plastic-water-bottle">
           <input
-            type="radio"
+            type="checkbox"
             id="plastic-water-bottle"
             value={categories["general consumption"]["Plastic water bottle"]}
             onChange={handleChecked}
@@ -73,7 +73,7 @@ export default function General() {
         </label>
         <label htmlFor="aluminum-can">
           <input
-            type="radio"
+            type="checkbox"
             id="aluminum-can"
             value={categories["general consumption"]["Aluminum can"]}
             onChange={handleChecked}
@@ -82,7 +82,7 @@ export default function General() {
         </label>
         <label htmlFor="smartphone">
           <input
-            type="radio"
+            type="checkbox"
             id="smartphone"
             value={categories["general consumption"]["Smartphone"]}
             onChange={handleChecked}
@@ -91,7 +91,7 @@ export default function General() {
         </label>
         <label htmlFor="laptop">
           <input
-            type="radio"
+            type="checkbox"
             id="laptop"
             value={categories["general consumption"]["Laptop"]}
             onChange={handleChecked}
@@ -100,7 +100,7 @@ export default function General() {
         </label>
         <label htmlFor="desktop">
           <input
-            type="radio"
+            type="checkbox"
             id="desktop"
             value={categories["general consumption"]["Desktop computer"]}
             onChange={handleChecked}
@@ -109,7 +109,7 @@ export default function General() {
         </label>
         <label htmlFor="led-light-bulb">
           <input
-            type="radio"
+            type="checkbox"
             id="led-light-bulb"
             value={categories["general consumption"]["LED light bulb"]}
             onChange={handleChecked}
@@ -118,14 +118,16 @@ export default function General() {
         </label>
         <label htmlFor="incandescent-light-bulb">
           <input
-            type="radio"
+            type="checkbox"
             id="incandescent-light-bulb"
             value={categories["general consumption"]["Incandescent light bulb"]}
             onChange={handleChecked}
           />
           Incandescent light bulb
         </label>
-        <button onClick={handleSubmit}>Finish!</button>
+        <button className="next" onClick={handleSubmit}>
+          Finish!
+        </button>
       </form>
     </div>
   );

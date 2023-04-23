@@ -1,0 +1,50 @@
+nav {
+  margin: -8px;
+  padding: 5px;
+}
+
+.homeConsumption {
+  background-image: url("/public/home-energy.gif");
+  background-position: right 3em bottom 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* opacity: 0.9; */
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.home_form {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.8rem;
+
+  width: 40%;
+}
+
+.home_q {
+  font-size: 1.5rem;
+  color: rgb(36, 65, 124);
+  margin-bottom: 0px;
+  width: 40%;
+}
+
+.home_sub {
+  color: rgb(58, 91, 156);
+  font-style: italic;
+  width: 40%;
+}
+
+.home_sub_q {
+  letter-spacing: 1px;
+  color: rgb(57, 80, 128);
+}
+
+input[type="checkbox"] {
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid rgb(38, 41, 224);
+  border-radius: 0.16em;
+}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { useContextProvider } from "./Provider.js";
+import "./HomeConsumption.css";
 
 export default function HomeConsumption() {
   const { result, setResult, categories } = useContextProvider();
@@ -27,11 +28,11 @@ export default function HomeConsumption() {
 
   return (
     <>
-      <div className="homeConsumption" style={{ fontFamily: "monospace" }}>
-        <h2>In your Home, what do you use?</h2>
-        <h4>Select all that apply!</h4>
-        <form onSubmit={handleSubmit}>
-          <h4>Electricity Source?</h4>
+      <div className="homeConsumption">
+        <h2 className="home_q">In your home, what do you use?</h2>
+        <h4 className="home_sub">Select all that apply!</h4>
+        <form className="home_form" onSubmit={handleSubmit}>
+          <h4 className="home_sub_q">Electricity Source?</h4>
           <label htmlFor="electricity (coal)">
             <input
               type="checkbox"
@@ -39,7 +40,7 @@ export default function HomeConsumption() {
               value={categories.home["Electricity (coal)"]}
               onChange={handleChecked}
             />
-            Electricity (coal)
+            Coal
           </label>
           <label htmlFor="electricity (natural gas)">
             <input
@@ -48,7 +49,7 @@ export default function HomeConsumption() {
               value={categories.home["Electricity (natural gas)"]}
               onChange={handleChecked}
             />
-            Electricity (natural gas)
+            Natural Gas
           </label>
           <label htmlFor="electricity (renewable)">
             <input
@@ -57,10 +58,11 @@ export default function HomeConsumption() {
               value={categories.home["Electricity (renewable)"]}
               onChange={handleChecked}
             />
-            Electricity (renewable)
+            Renewable
           </label>
           <hr></hr>
-          <h4>Heating Source?</h4>
+          <hr></hr>
+          <h4 className="home_sub_q">Heating Source?</h4>
           <label htmlFor="natural gas (heating)">
             <input
               type="checkbox"
@@ -68,7 +70,7 @@ export default function HomeConsumption() {
               value={categories.home["Natural gas (heating)"]}
               onChange={handleChecked}
             />
-            Natural gas (heating)
+            Natural gas
           </label>
           <label htmlFor="oil (heating)">
             <input
@@ -77,7 +79,7 @@ export default function HomeConsumption() {
               value={categories.home["Oil (heating)"]}
               onChange={handleChecked}
             />
-            Oil (heating)
+            Oil
           </label>
           <label htmlFor="propane (heating)">
             <input
@@ -86,9 +88,11 @@ export default function HomeConsumption() {
               value={categories.home["Propane (heating)"]}
               onChange={handleChecked}
             />
-            Propane (heating)
+            Propane
           </label>
-          <button onClick={handleChecked}>Next!</button>
+          <button className="next" onClick={handleChecked}>
+            Next!
+          </button>
         </form>
       </div>
     </>
