@@ -1,0 +1,15 @@
+.results {
+    display: grid;
+    grid-template-rows: 1fr 2fr .5fr;
+    border: 1px solid black;
+}
+
+.results-chart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.monthly h4 {
+    border: 1px solid black;
+}
