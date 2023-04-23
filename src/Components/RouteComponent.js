@@ -19,7 +19,7 @@ function RouteComponent(props) {
             <Route path="/results" element={<Results />} />
             <Route path="/tips" element={<Tips />} />
           </Routes>
-    );
+    )   
 }
 
 export default RouteComponent;

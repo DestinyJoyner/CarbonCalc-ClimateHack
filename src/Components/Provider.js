@@ -19,7 +19,7 @@ function Provider({children}) {
         }} >
             <Nav />
             {children}
-        </ContextData.Provider>
+        </ContextData.Provider >
     );
 }
 
