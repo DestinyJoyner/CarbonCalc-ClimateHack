@@ -12,9 +12,14 @@ function Home(props) {
       </button>
 
       {/* a tag to outside carbon link */}
-      <Link className="link" to="/">
-        What is Carbon Footprint?
-      </Link>
+
+      <a
+        href="https://www.conservation.org/stories/what-is-a-carbon-footprint"
+        target="_blank"
+        rel="noreferrer"
+      >
+        What is a Carbon Footprint?
+      </a>
     </div>
   );
 }

@@ -1,24 +1,27 @@
 .home {
-  margin-top: 5%;
+  /* margin-top: 5%; */
   display: grid;
   grid-template-rows: 1fr 1fr 0.5fr;
   justify-items: center;
   align-items: center;
-  border: 1px solid black;
-  height: 80vh;
+  background-color: rgb(247, 247, 245);
+  height: 90vh;
   background-image: url("/public/carbon-home.gif");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.home .link {
-  grid-row: 3;
+.home a {
+  grid-row: 2;
+  margin-top: 22rem;
   text-decoration: none;
+  color: rgb(24, 56, 119);
+  font-weight: 800;
 }
 .start {
   all: unset;
-  font-size: 4em;
+  font-size: 3em;
   height: fit-content;
   width: fit-content;
 }

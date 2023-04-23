@@ -3,6 +3,7 @@ nav {
   grid-template-columns: 0.5fr 3fr 0.5fr;
   align-items: center;
   margin-bottom: 0px;
+  background-color: rgb(247, 247, 245);
 }
 nav h1 {
   justify-self: center;
@@ -26,9 +27,12 @@ nav button {
   height: 15vh;
   left: 77%;
   top: 8%;
+  background-color: rgb(232, 237, 240);
+  border-radius: 8px;
 }
 
 .menu a {
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-decoration: none;
+  color: rgb(24, 56, 119);
 }
