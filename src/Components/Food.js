@@ -14,27 +14,11 @@ import { GiChicken, GiWheat, GiFarmer, GiRiver } from "react-icons/gi";
 import { BiBowlRice } from "react-icons/bi";
 
 import { useNavigate } from "react-router-dom";
-// import categories from "../data.js";
 
 import { useContextProvider } from "./Provider.js";
 import { useState } from "react";
 
 import "./Food.css";
-
-// "food": {
-//     "Beef": 220,
-//     "Chicken": 64,
-//     "Pork": 34.5,
-//     "Fish (wild)": 21.5,
-//     "Fish (farmed)": 50,
-//     "Dairy (cheese)": 83,
-//     "Dairy (milk)": 20.75,
-//     "Eggs": 31,
-//     "Rice": 4.4,
-//     "Wheat": 5.65,
-//     "Vegetables": 5.2,
-//     "Fruits": 11.2
-//   },
 
 export default function Food() {
   const navigate = useNavigate();
