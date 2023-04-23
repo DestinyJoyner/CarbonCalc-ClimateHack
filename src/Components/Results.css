@@ -63,4 +63,11 @@
     padding-left: 10px;
 }
 
+.result-links {
+    grid-row: 5;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+
 
