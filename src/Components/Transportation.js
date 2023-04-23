@@ -53,18 +53,21 @@ export default function Transportation() {
 
   return (
     <form onSubmit={handleSubmit} className="transpo-form">
-      <h2>Transportation</h2>
+      <h2>What methods of Transportation do you use?</h2>
+      <h4>Select all that apply!</h4>
       <div className="selections">
+        <p>Gas Car</p>
         <label htmlFor="gas_car">
           <input
             type="checkbox"
             id="gas_car"
             value={checked.gas_car}
             onChange={handleCheck}
-          />
-          <AiOutlineCar size="30" />
-          <BiGasPump size="30" />
+          />{" "}
+          <AiOutlineCar size="40" />
+          <BiGasPump size="40" />
         </label>
+        <p>Electric Car</p>
         <label htmlFor="elec_car">
           <input
             type="checkbox"
@@ -72,9 +75,10 @@ export default function Transportation() {
             value={checked.elec}
             onChange={handleCheck}
           />
-          <AiFillCar size="30" />
-          <GiElectric size="30" />
+          <AiFillCar size="40" />
+          <GiElectric size="40" />
         </label>
+        <p>Bicycle</p>
         <label htmlFor="bicycle">
           <input
             type="checkbox"
@@ -82,10 +86,9 @@ export default function Transportation() {
             value={checked.bike}
             onChange={handleCheck}
           />
-          <MdOutlineDirectionsBike size="35" />
+          <MdOutlineDirectionsBike size="40" />
         </label>
-      </div>
-      <div className="selections">
+        <p>Domestic Flight</p>
         <label htmlFor="dom_flight">
           <input
             type="checkbox"
@@ -93,9 +96,10 @@ export default function Transportation() {
             value={checked.dom_flight}
             onChange={handleCheck}
           />
-          <BsAirplaneEngines size="30" />
-          <BsFlag size="30" />
+          <BsAirplaneEngines size="40" />
+          <BsFlag size="40" />
         </label>
+        <p>International Flight</p>
         <label htmlFor="int_flight">
           <input
             type="checkbox"
@@ -103,9 +107,10 @@ export default function Transportation() {
             value={checked.int_flight}
             onChange={handleCheck}
           />
-          <BsAirplaneFill size="30" />
-          <BiWorld size="30" />
+          <BsAirplaneFill size="40" />
+          <BiWorld size="40" />
         </label>
+        <p>Mass Transit</p>
         <label htmlFor="mass_transit">
           <input
             type="checkbox"
@@ -113,7 +118,7 @@ export default function Transportation() {
             value={checked.mass_transit}
             onChange={handleCheck}
           />
-          <BsTrainLightrailFront size="35" />
+          <BsTrainLightrailFront size="40" />
         </label>
       </div>
 

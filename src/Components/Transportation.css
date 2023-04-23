@@ -1,9 +1,10 @@
 .selections {
-    width: 50vw;
+    width: 20vw;
     margin: auto;
+    margin-left: 35vw;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2vh;
 }
 
@@ -15,14 +16,17 @@
     display: flex;
     justify-content: center;
 
-    margin-left: 17vw;
-    margin-right: 17vw;
-    padding-top: 6vh;
-    padding-bottom: 6vh;
+    padding-bottom: 1vh;
 }
 
 .selections label:hover {
-    box-shadow: 3px 3px 5px 1px black;
+    box-shadow: 3px 3px black;
+}
+
+.selections p {
+    font-size: 2vw;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 .selections input {
