@@ -47,7 +47,7 @@ const categories= {
   // https://blog.arcadia.com/50-ways-to-reduce-your-carbon-footprint/
   const tips = [
     {
-        category: "transportation",
+        category: "Transportation",
         tips : [
             "Carpool",
             "Public transportation",
@@ -57,7 +57,7 @@ const categories= {
         ]
     },
     {
-        category: "home",
+        category: "Home",
         tips : [
             "Turn off the lights when you leave a room",
             "Unplug electronics not in use",
@@ -69,7 +69,7 @@ const categories= {
         ]
     },
     {
-        category: "food",
+        category: "Food",
         tips : [
             "Compost",
             "Meatless Monday",
@@ -81,7 +81,7 @@ const categories= {
         ]
     },
     {
-        category: "general",
+        category: "General",
         tips : [
             "Re-usable water bottle",
             "Buy fair trade clothing/ shop seconhand stores",

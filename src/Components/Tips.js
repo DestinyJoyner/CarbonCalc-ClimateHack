@@ -16,7 +16,7 @@ function Tips(props) {
 
     // onClick function for setting tipData value
     function showTips(val){
-        const data = tips.find(({category}) => category === val)
+        const data = tips.find(({category}) => category.toLowerCase() === val)
         setType(data.category)
         setTipData(data.tips)
     }
