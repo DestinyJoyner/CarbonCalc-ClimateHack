@@ -1,0 +1,13 @@
+.food {
+    width: 70vw;
+    margin: auto;
+}
+
+.food-selections {
+    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 5vw;
+    padding: 7vh;
+}
