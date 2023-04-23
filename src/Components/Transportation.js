@@ -4,10 +4,10 @@ import {
   BsAirplaneEngines,
   BsAirplaneFill,
   BsTrainLightrailFront,
-  BsFlag
+  BsFlag,
 } from "react-icons/bs";
-import { BiGasPump, BiWorld } from "react-icons/bi"
-import { GiElectric } from "react-icons/gi"
+import { BiGasPump, BiWorld } from "react-icons/bi";
+import { GiElectric } from "react-icons/gi";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -27,28 +27,28 @@ export default function Transportation() {
     mass_transit: false,
   });
 
-  const { result, setResult, categories} = useContextProvider()
+  const { result, setResult, categories } = useContextProvider();
 
   const handleCheck = (e) => {
     setChecked({ ...checked, [e.target.id]: !checked[e.target.id] });
   };
 
   const calculateCarbFootprint = () => {
-    let totalCarbFoorprint = 0
+    let totalCarbFoorprint = 0;
 
     for (let el in checked) {
       if (checked[el]) {
-        totalCarbFoorprint += categories.transportation[el]
+        totalCarbFoorprint += categories.transportation[el];
       }
     }
 
-    setResult(result + totalCarbFoorprint)
-  }
+    setResult(result + totalCarbFoorprint);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    calculateCarbFootprint()
-    navigate("/food")
+    calculateCarbFootprint();
+    navigate("/food");
   };
 
   return (
@@ -62,7 +62,8 @@ export default function Transportation() {
             value={checked.gas_car}
             onChange={handleCheck}
           />
-          <AiOutlineCar size="30"/><BiGasPump size="30"/>
+          <AiOutlineCar size="30" />
+          <BiGasPump size="30" />
         </label>
         <label htmlFor="elec_car">
           <input
@@ -71,7 +72,8 @@ export default function Transportation() {
             value={checked.elec}
             onChange={handleCheck}
           />
-          <AiFillCar size="30"/><GiElectric size="30" />
+          <AiFillCar size="30" />
+          <GiElectric size="30" />
         </label>
         <label htmlFor="bicycle">
           <input
@@ -82,6 +84,8 @@ export default function Transportation() {
           />
           <MdOutlineDirectionsBike size="35" />
         </label>
+      </div>
+      <div className="selections">
         <label htmlFor="dom_flight">
           <input
             type="checkbox"
@@ -89,7 +93,8 @@ export default function Transportation() {
             value={checked.dom_flight}
             onChange={handleCheck}
           />
-          <BsAirplaneEngines size="30" /><BsFlag size="30" />
+          <BsAirplaneEngines size="30" />
+          <BsFlag size="30" />
         </label>
         <label htmlFor="int_flight">
           <input
@@ -98,7 +103,8 @@ export default function Transportation() {
             value={checked.int_flight}
             onChange={handleCheck}
           />
-          <BsAirplaneFill size="30" /><BiWorld size="30" />
+          <BsAirplaneFill size="30" />
+          <BiWorld size="30" />
         </label>
         <label htmlFor="mass_transit">
           <input
@@ -111,8 +117,8 @@ export default function Transportation() {
         </label>
       </div>
 
-      <button id="submit-button" type="sumbit">
-        Submit
+      <button className="next" type="sumbit">
+        Next!
       </button>
     </form>
   );

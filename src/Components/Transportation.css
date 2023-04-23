@@ -11,13 +11,18 @@
     text-align: center;
 }
 
-#submit-button {
-    margin: 6vh
-}
-
 .selections label {
     display: flex;
     justify-content: center;
+
+    margin-left: 17vw;
+    margin-right: 17vw;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+}
+
+.selections label:hover {
+    box-shadow: 3px 3px 5px 1px black;
 }
 
 .selections input {
