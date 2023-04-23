@@ -1,4 +1,4 @@
-Explore [CarbonCalc](climate-hackathon.netlify.app) for yourself!
+Explore [CarbonCalc](https://climate-hackathon.netlify.app/) for yourself! 
 
 
 ## Inspiration
