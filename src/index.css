@@ -2,7 +2,7 @@
   font-family: "Signika", sans-serif;
   /* font-family: "Signika Negative", sans-serif; */
   /* font-family: "M PLUS Rounded 1c", sans-serif; */
-  background-color: rgb(230, 234, 239);
+  /* background-color: rgb(230, 234, 239); */
 }
 
 .next {
@@ -10,7 +10,7 @@
   position: fixed;
   top: 82%;
   left: 76%;
-  width: 12%;
+  width: 14%;
   border-radius: 10px;
   transition: 0.5s;
   background-color: rgb(240, 224, 203);
@@ -30,6 +30,6 @@
     #c2e9fb 51%,
     #a1c4fd 100%
   );
-  width: 14%;
+  width: 16%;
   border: dotted 2.6px rgb(36, 65, 124);
 }

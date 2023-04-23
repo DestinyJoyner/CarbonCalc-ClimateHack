@@ -20,32 +20,3 @@
   flex-direction: column;
   line-height: 2rem;
 }
-
-.general_next {
-  padding: 4px;
-  position: fixed;
-  top: 82%;
-  left: 76%;
-  width: 12%;
-  border-radius: 10px;
-  transition: 0.5s;
-  background-color: rgb(240, 224, 203);
-
-  /* box-shadow: 0 0 20px #a2b1d0; */
-}
-
-.general_next:hover {
-  content: "»";
-  font-weight: 800;
-  transition: 0.8s;
-  letter-spacing: 1.3px;
-
-  background-image: linear-gradient(
-    to right,
-    #a1c4fd 0%,
-    #c2e9fb 51%,
-    #a1c4fd 100%
-  );
-  width: 14%;
-  border: dotted 2.6px rgb(36, 65, 124);
-}

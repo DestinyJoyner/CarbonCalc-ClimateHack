@@ -1,11 +1,10 @@
 nav {
   margin: -8px;
-  padding: 5px;
 }
 
 .homeConsumption {
   background-image: url("/public/home-energy.gif");
-  background-position: right 3em bottom 10px;
+  background-position: right;
   background-size: contain;
   background-repeat: no-repeat;
   /* opacity: 0.9; */
@@ -20,7 +19,10 @@ nav {
   display: flex;
   flex-direction: column;
   line-height: 1.8rem;
-
+  background-color: rgb(243, 238, 231);
+  opacity: 80%;
+  padding: 4px;
+  border-radius: 16px;
   width: 40%;
 }
 
@@ -28,13 +30,11 @@ nav {
   font-size: 1.5rem;
   color: rgb(36, 65, 124);
   margin-bottom: 0px;
-  width: 40%;
 }
 
 .home_sub {
   color: rgb(58, 91, 156);
   font-style: italic;
-  width: 40%;
 }
 
 .home_sub_q {
