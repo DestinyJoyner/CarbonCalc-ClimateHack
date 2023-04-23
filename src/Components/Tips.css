@@ -58,9 +58,11 @@
     }
     .show-tips h3 {
         text-align: center;
+        margin-top: 0;
     }
-    .foot{
-        margin-top: 20%;
-        text-align: center;
+    .tips-gif {
+        height:170px ;
+        margin-left: 4%;
+        
     }
 }
