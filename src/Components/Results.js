@@ -7,6 +7,7 @@ import down from "../assets/green-arrow.png"
 import up from "../assets/red-arrow.png"
 import "./Results.css"
 import { Link } from "react-router-dom";
+import {HiOutlineLightBulb} from "react-icons/hi"
 
 export default function Results() {
 
@@ -60,9 +61,11 @@ export default function Results() {
         </span>
       </section>
       <section className="result-links">
-        <Link to= "/">Back to Home</Link>
-        <Link to= "/tips">Helpful Tips</Link>
+        <Link to= "/">Re-Take the Quiz</Link>
+        <Link to= "/tips">Helpful Tips <HiOutlineLightBulb size ={"17px"} /></Link>
       </section>
+
+      <span className="disclaimer">**These values are estimates**</span>
   </div>
   );
 }
