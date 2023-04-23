@@ -6,6 +6,7 @@ import {MdFastfood} from "react-icons/md"
 import {HiHome} from "react-icons/hi"
 import {GiFootprint} from "react-icons/gi"
 import {BsTreeFill} from "react-icons/bs"
+import climate from "../assets/climate-gif.gif"
 
 import "./Tips.css"
 
@@ -31,17 +32,17 @@ function Tips(props) {
             </button>
             <button 
             onClick = {() => showTips("general")}
-            className="general tip-category">
+            className="tip-category">
                 <BsFillBasket3Fill size = {"40px"} />
             </button>
             <button 
             onClick = {() => showTips("food")}
-            className="food tip-category">
+            className="tip-category">
                 <MdFastfood size = {"40px"} />
             </button>
             <button 
             onClick = {() => showTips("home")}
-            className="home-goods tip-category">
+            className="tip-category">
                 <HiHome size={"40px"} />
             </button>
             </div>
@@ -54,7 +55,14 @@ function Tips(props) {
                             <BsTreeFill color = {"#15793c"} />
                             <span>{el}</span>
                         </li>) ||
-                        <h3>Click On An Icon <br/> <br/>  to View Ways to  <br/> <br/>   Reduce Your Carbon <br/><br/> <GiFootprint size = {"50px"} /></h3>
+                        <>
+                        <h3>Click On An Icon  <br/><br/>
+                        to View Ways to  <br/> <br/>  
+                        Reduce Your Carbon<br/><br/> <GiFootprint size = {"50px"} />
+                        </h3>
+                        <br/>
+                        <img className="tips-gif" src = {climate} alt = "gif" />
+                        </>
                 }
             </section>
         </div>
