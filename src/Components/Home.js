@@ -9,7 +9,7 @@ function Home(props) {
         {/* <img src = {homePage} alt = "gif" /> */}
         <button 
         className="start">
-            <Link to = "/food">START</Link>
+            <Link to = "/transportation">START</Link>
         </button>
 
         {/* a tag to outside carbon link */}
