@@ -4,10 +4,19 @@
 }
 
 .food-selections {
-    background-color: red;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 5vw;
+    gap: 3vw;
     padding: 7vh;
+
+    text-align: center;
+}
+
+.food-selections label {
+    font-size: 2vw;
+}
+
+.food-selections label:hover {
+    box-shadow: 3px 3px black;
 }

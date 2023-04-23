@@ -1,5 +1,18 @@
 import React from "react";
 
+import { SiHappycow } from "react-icons/si";
+import {
+  TbPig,
+  TbFish,
+  TbCheese,
+  TbMilk,
+  TbEggs,
+  TbCarrot,
+  TbBrandApple,
+} from "react-icons/tb";
+import { GiChicken, GiWheat } from "react-icons/gi";
+import { BiBowlRice } from "react-icons/bi";
+
 import { useNavigate } from "react-router-dom";
 // import categories from "../data.js";
 
@@ -64,7 +77,7 @@ export default function Food() {
               value={categories.food["Beef"]}
               onChange={handleOptionChange}
             />
-            Beef
+            <SiHappycow size="50" /> Beef
           </label>
           <label htmlFor="chicken">
             <input
@@ -73,7 +86,7 @@ export default function Food() {
               value={categories.food["Chicken"]}
               onChange={handleOptionChange}
             />
-            Chicken
+            <GiChicken size="50" /> Chicken
           </label>
           <label htmlFor="pork">
             <input
@@ -82,7 +95,7 @@ export default function Food() {
               value={categories.food["Pork"]}
               onChange={handleOptionChange}
             />
-            Pork
+            <TbPig size="50" /> Pork
           </label>
 
           <label htmlFor="fish (wild)">
@@ -92,7 +105,7 @@ export default function Food() {
               value={categories.food["Fish (wild)"]}
               onChange={handleOptionChange}
             />
-            Fish (wild)
+            <TbFish size="50" /> Wild Fish
           </label>
           <label htmlFor="fish (farmed)">
             <input
@@ -101,7 +114,7 @@ export default function Food() {
               value={categories.food["Fish (farmed)"]}
               onChange={handleOptionChange}
             />
-            Fish (farmed)
+            <TbFish size="50" /> Farmed Fish
           </label>
           <label htmlFor="dairy (cheese)">
             <input
@@ -110,7 +123,7 @@ export default function Food() {
               value={categories.food["Dairy (cheese)"]}
               onChange={handleOptionChange}
             />
-            Dairy (cheese)
+            <TbCheese size="50" /> Cheese
           </label>
           <label htmlFor="dairy (milk)">
             <input
@@ -119,7 +132,7 @@ export default function Food() {
               value={categories.food["Dairy (milk)"]}
               onChange={handleOptionChange}
             />
-            Dairy (milk)
+            <TbMilk size="50" /> Milk
           </label>
           <label htmlFor="eggs">
             <input
@@ -128,7 +141,7 @@ export default function Food() {
               value={categories.food["Eggs"]}
               onChange={handleOptionChange}
             />
-            Eggs
+            <TbEggs size="50" /> Eggs
           </label>
           <label htmlFor="rice">
             <input
@@ -137,7 +150,7 @@ export default function Food() {
               value={categories.food["Rice"]}
               onChange={handleOptionChange}
             />
-            Rice
+            <BiBowlRice size="50" /> Rice
           </label>
           <label htmlFor="wheat">
             <input
@@ -146,7 +159,7 @@ export default function Food() {
               value={categories.food["Wheat"]}
               onChange={handleOptionChange}
             />
-            Wheat
+            <GiWheat size="50" /> Wheat
           </label>
           <label htmlFor="vegetables">
             <input
@@ -155,7 +168,7 @@ export default function Food() {
               value={categories.food["Vegetables"]}
               onChange={handleOptionChange}
             />
-            Vegetables
+            <TbCarrot size="50" /> Veggies
           </label>
           <label htmlFor="fruits">
             <input
@@ -164,7 +177,7 @@ export default function Food() {
               value={categories.food["Fruits"]}
               onChange={handleOptionChange}
             />
-            Fruits
+            <TbBrandApple size="50" /> Fruits
           </label>
         </div>
         <button className="next" onClick={handleSubmit}>
